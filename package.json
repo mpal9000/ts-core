@@ -17,10 +17,7 @@
     "type": "git",
     "url": "https://github.com/mpal9000/ts-core.git"
   },
-  "private": true,
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
+  "private": false,
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
