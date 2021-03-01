@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm exec --silent --call "run-s --silent _npm-ci git-status pkg-deps-check format-check build test-no-compile"

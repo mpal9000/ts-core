@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm exec --silent --call "lint-staged --quiet && run-s --silent format-check test"

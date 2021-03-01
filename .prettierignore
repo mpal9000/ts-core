@@ -1,0 +1,19 @@
+/*
+
+!/src/
+/src/**
+!/src/**/
+!/src/**/*.ts
+
+**/.*/
+**/.*
+
+!/.eslintrc.json
+!/.prettierrc.json
+# !/CHANGELOG.md
+!/CONTRIBUTING.md
+!/DOC.md
+!/README.md
+!/TODO.md
+!/tsconfig.json
+!/tsconfig-dev.json

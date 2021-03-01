@@ -1,0 +1,113 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "tsconfigRootDir": "./",
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": 2017,
+    "ecmaFeatures": {
+      "jsx": false
+    }
+  },
+  "env": {
+    "es2017": true
+  },
+  "plugins": ["@typescript-eslint", "import"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "noInlineConfig": false,
+  "reportUnusedDisableDirectives": true,
+  "rules": {
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-unused-vars": "off",
+    "camelcase": "off",
+    "eqeqeq": ["error", "always"],
+    "import/extensions": ["error", "ignorePackages"],
+    "no-console": ["warn", { "allow": ["info", "error"] }],
+    "no-fallthrough": "off",
+    "no-restricted-globals": [
+      "error",
+      "addEventListener",
+      "blur",
+      "close",
+      "closed",
+      "confirm",
+      "defaultStatus",
+      "defaultstatus",
+      "event",
+      "external",
+      "find",
+      "focus",
+      "frameElement",
+      "frames",
+      "history",
+      "innerHeight",
+      "innerWidth",
+      "length",
+      "location",
+      "locationbar",
+      "menubar",
+      "moveBy",
+      "moveTo",
+      "name",
+      "onblur",
+      "onerror",
+      "onfocus",
+      "onload",
+      "onresize",
+      "onunload",
+      "open",
+      "opener",
+      "opera",
+      "outerHeight",
+      "outerWidth",
+      "pageXOffset",
+      "pageYOffset",
+      "parent",
+      "print",
+      "removeEventListener",
+      "resizeBy",
+      "resizeTo",
+      "screen",
+      "screenLeft",
+      "screenTop",
+      "screenX",
+      "screenY",
+      "scroll",
+      "scrollBy",
+      "scrollTo",
+      "scrollX",
+      "scrollY",
+      "scrollbars",
+      "self",
+      "status",
+      "statusbar",
+      "stop",
+      "toolbar",
+      "top",
+      "globalThis"
+    ],
+    "no-unused-vars": "off",
+    "no-shadow": "off"
+  },
+  "overrides": [
+    {
+      "files": ["./src/**/*.test.ts"],
+      "rules": {
+        "@typescript-eslint/ban-ts-comment": "off"
+      }
+    },
+    {
+      "files": ["./src/**/Float/*.ts", "./src/**/Integer/*.ts"],
+      "rules": {
+        "@typescript-eslint/restrict-plus-operands": "off"
+      }
+    }
+  ]
+}
